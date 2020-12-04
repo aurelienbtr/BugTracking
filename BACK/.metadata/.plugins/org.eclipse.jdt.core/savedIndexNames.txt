@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\aurel\Desktop\BugTracking\.metadata\.plugins\org.eclipse.jdt.core
+3869568855.index
+1448510345.index

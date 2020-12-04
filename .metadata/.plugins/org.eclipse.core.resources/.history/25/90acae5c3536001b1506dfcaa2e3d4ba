@@ -1,0 +1,5 @@
+package fr.istv.BugTracking;
+
+public class BugTrackingRepository {
+
+}
