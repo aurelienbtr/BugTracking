@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
+    <libraryInfo home="C:\Users\Ziane\AppData\Local\Temp\eoi5450.tmp\plugins\org.eclipse.justj.openjdk.hotspot.jre.minimal.stripped.win32.x86_64_14.0.2.v20200815-0932" version="14.0.2"/>
     <libraryInfo home="C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot" version="11.0.9.1"/>
+    <libraryInfo home="C:\Users\Ziane\AppData\Local\Temp\eoi5450.tmp\plugins\org.eclipse.justj.openjdk.hotspot.jre.minimal.stripped.win32.x86_64_14.0.2.v20200815-0932\jre" version="14.0.2"/>
 </libraryInfos>

@@ -26,6 +26,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Ziane\Desktop\BugTracking\BACK"/>
 			<item value="C:\Users\aurel\Desktop\BugTracking"/>
 		</list>
 		<list key="projectNameTemplate">
