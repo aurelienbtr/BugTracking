@@ -37,7 +37,6 @@ INDEX VERSION 1.131+C:\Users\Ziane\Desktop\BugTracking\.metadata\.plugins\org.ec
 27166153.index
 2714650900.index
 1406408732.index
-1105077832.index
 3266401264.index
 3840168742.index
 3805228885.index

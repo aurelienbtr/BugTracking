@@ -31,6 +31,7 @@ public class BugController {
     @Autowired
     DeveloppeurRepository developersRepository;
     
+    //test des routes avec un simple string
         @RequestMapping(value="/Buug", method=RequestMethod.GET)
         public String listeBug() {
             return "Un exemple de buug";
@@ -84,7 +85,7 @@ public class BugController {
    //	bugsRepository.deleteById(id);
 
    //}
-    @GetMapping("bug/date")
+    @GetMapping("bug/datedebut/datefin")
     public List<Bug> getBugBetweenTwoDate(@RequestParam("datedebut") @DateTimeFormat(pattern="yyyy-MM-dd")Date datedebut,
                                   @RequestParam("datefin") @DateTimeFormat(pattern = "yyyy-MM-dd") Date datefin){
         return bugsRepository.findBugByDate(datedebut,datefin);

@@ -17,7 +17,7 @@ public class CreateCommentaire{
     private String message;
     private Bug bug;
     private Developpeur dev;
-    private Date dateCom;
+    private Date datecom;
     private String titre;
     
 }

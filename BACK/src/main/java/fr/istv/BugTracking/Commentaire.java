@@ -42,7 +42,7 @@ public class Commentaire {
     private Developpeur developpeur;
     
 	@Temporal(TemporalType.DATE)
-	private Date dateCom;
+	private Date datecom;
 	
 
 }
