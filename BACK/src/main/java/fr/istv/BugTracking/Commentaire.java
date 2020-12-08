@@ -2,6 +2,8 @@ package fr.istv.BugTracking;
 
 import java.util.Date;
 
+import fr.istv.BugTracking.enumeration.*;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

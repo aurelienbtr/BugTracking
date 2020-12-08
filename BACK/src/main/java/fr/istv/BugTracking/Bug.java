@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,6 +18,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
+import fr.istv.BugTracking.enumeration.BugEtat;
+import fr.istv.BugTracking.enumeration.BugPriorite;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -36,8 +40,14 @@ public class Bug {
 	private int id;
 	private String titre;
 	private String description;
-	private String priorite;
-	private String etat;
+	
+	@Enumerated(EnumType.STRING) //HAUTE BASSE NORMAL
+	private BugPriorite priorite;
+
+	@Enumerated(EnumType.STRING) // T ODO, ENCOURS, TERMINE;
+	private BugEtat etat;
+	
+	
 	@Temporal(TemporalType.DATE)
 	private Date datecreation;
 	

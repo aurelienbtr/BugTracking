@@ -11,7 +11,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
+import fr.istv.BugTracking.enumeration.*;
 @Getter
 @Setter
 @NoArgsConstructor
@@ -19,8 +19,8 @@ import lombok.Setter;
 public class CreateBug {
     private String titre;
     private String description;
-    private String priorite;
-    private String etat;
+    private BugPriorite priorite;
+    private BugEtat etat;
 
   @Temporal(TemporalType.DATE)
    private Date datecreation;
