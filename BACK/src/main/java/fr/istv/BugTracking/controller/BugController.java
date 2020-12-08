@@ -1,10 +1,12 @@
 package fr.istv.BugTracking.controller;
 
-import java.util.Date;
+//import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import fr.istv.BugTracking.*;
+import fr.istv.BugTracking.exception.ResourceNotFoundException;
 import fr.istv.BugTracking.repositories.*;
 @RestController
 public class BugController {
@@ -49,8 +52,7 @@ public class BugController {
     public Bug AddBug(@Validated @RequestBody CreateBug bug){
     //    Date datecrea = new Date();
         
-        return bugsRepository.save(
-                Bug
+        return bugsRepository.save(Bug
                 .builder()
                 .titre(bug.getTitre())
                 .description(bug.getDescription())
@@ -62,5 +64,16 @@ public class BugController {
         );
     }
     
-   
+    @DeleteMapping("bug/{id}")
+    public ResponseEntity<?> deleteBugs(@PathVariable("id") Integer id) {
+        if(!bugsRepository.existsById(id)) {
+            throw new ResourceNotFoundException("Pas de bug numero " + id);
+        }
+
+        return bugsRepository.findById(id)
+                .map(bug -> {
+                    bugsRepository.delete(bug);
+                    return ResponseEntity.ok().build();
+                }).orElseThrow(() -> new ResourceNotFoundException("Pas de bug numero " + id));
+    }
 }

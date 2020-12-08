@@ -32,6 +32,7 @@ public class Developpeur {
 	private int idDev;
 	private String nom;
 	private String avatar; 
+	
 	@JsonIgnoreProperties({"bug", "commentaire"})
 	
 	@OneToMany
