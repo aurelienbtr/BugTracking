@@ -22,8 +22,8 @@ public class CreateBug {
     private String priorite;
     private String etat;
 
-//    @Temporal(TemporalType.DATE)
-  //  private Date dateCreation;
+  @Temporal(TemporalType.DATE)
+   private Date datecreation;
     private Developpeur developpeur;
     private List<Commentaire> commentaire;
 }

@@ -33,10 +33,10 @@ public class Developpeur {
 	private String nom;
 	private String avatar; 
 	
-	@JsonIgnoreProperties({"bug", "commentaire"})
+	@JsonIgnoreProperties({"bug", "commentaire"}) // qd on cree un dev avec Postman en Json, pas besoin de rentrer ca
 	
-	@OneToMany
+	@OneToMany(mappedBy = "developpeur")
 	private List<Bug> bug;
-	@OneToMany
+	@OneToMany(mappedBy = "developpeur")
 	private List<Commentaire> commentaire;
 }

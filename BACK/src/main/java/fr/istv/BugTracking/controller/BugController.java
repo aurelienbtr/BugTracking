@@ -1,6 +1,6 @@
 package fr.istv.BugTracking.controller;
 
-//import java.util.Date;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +50,7 @@ public class BugController {
     //Permet d'ajouter un bug
     @PostMapping("bug")
     public Bug AddBug(@Validated @RequestBody CreateBug bug){
-    //    Date datecrea = new Date();
+       Date datecrea = new Date(0);
         
         return bugsRepository.save(Bug
                 .builder()
@@ -58,7 +58,7 @@ public class BugController {
                 .description(bug.getDescription())
                 .priorite(bug.getPriorite())
                 .etat(bug.getEtat())
-             //   .dateCreation(datecrea)
+                .datecreation(datecrea)
                 .developpeur(bug.getDeveloppeur())
                 .build()
         );
@@ -76,4 +76,12 @@ public class BugController {
                     return ResponseEntity.ok().build();
                 }).orElseThrow(() -> new ResourceNotFoundException("Pas de bug numero " + id));
     }
+    
+   // @DeleteMapping("bug/{id}")
+   // public void deleteBug(@PathVariable Integer id){
+   //	bugsRepository.deleteById(id);
+
+   //}
+    
+    
 }

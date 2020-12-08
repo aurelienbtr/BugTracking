@@ -36,8 +36,8 @@ public class Bug {
 	private String description;
 	private String priorite;
 	private String etat;
-	//@Temporal(TemporalType.DATE)
-	//private Date dateCreation;
+	@Temporal(TemporalType.DATE)
+	private Date datecreation;
 	
 	    
 	    @JsonIgnoreProperties({"commentaire"})

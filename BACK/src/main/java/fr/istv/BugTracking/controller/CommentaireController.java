@@ -1,5 +1,6 @@
 package fr.istv.BugTracking.controller;
 
+import java.util.Date;
 //import java.util.Date;
 import java.util.List;
 
@@ -42,19 +43,19 @@ public class CommentaireController {
     	return comRepository.findAll();
     }
     
-    //Permet d'ajouter un dev
+    //Permet d'ajouter un commentaire
     @PostMapping("commentaire")
     public Commentaire AddCom(@Validated @RequestBody CreateCommentaire com){
-    	// Date datecrea = new Date();
+    	 Date datecrea = new Date();
     	
         return comRepository.save(
                 Commentaire
                 .builder()
                 .message(com.getMessage())
                 .titre(com.getTitre())
-           //     .dateCom(datecrea)
-                //.bug(dev.getBug())
-                //.dev(dev.getDev())
+                .dateCom(datecrea)
+                .bug(com.getBug())
+                .developpeur(com.getDev())
                 .build()
         );
     }
