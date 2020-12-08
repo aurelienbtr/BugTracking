@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import fr.istv.BugTracking.*;
 import fr.istv.BugTracking.exception.ResourceNotFoundException;
@@ -82,6 +84,10 @@ public class BugController {
    //	bugsRepository.deleteById(id);
 
    //}
-    
+    @GetMapping("bug/date")
+    public List<Bug> getBugBetweenTwoDate(@RequestParam("datedebut") @DateTimeFormat(pattern="yyyy-MM-dd")Date datedebut,
+                                  @RequestParam("datefin") @DateTimeFormat(pattern = "yyyy-MM-dd") Date datefin){
+        return bugsRepository.findBugByDate(datedebut,datefin);
+    }
     
 }
