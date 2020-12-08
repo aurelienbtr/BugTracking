@@ -12,10 +12,12 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class CreateCommentaire{
     private String message;
     private Bug bug;
     private Developpeur dev;
-    private Date dateCom;
+//    private Date dateCom;
+    private String titre;
     
 }

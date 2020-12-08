@@ -1,4 +1,5 @@
-package config;
+package fr.istv.BugTracking.config;
+
 
 
 import org.springframework.context.annotation.Bean;

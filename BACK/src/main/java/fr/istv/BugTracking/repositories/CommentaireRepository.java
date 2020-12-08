@@ -1,4 +1,4 @@
-package repositories;
+package fr.istv.BugTracking.repositories;
 
 import fr.istv.BugTracking.Bug;
 import fr.istv.BugTracking.Commentaire;

@@ -10,6 +10,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -25,56 +27,22 @@ import lombok.Setter;
 @Entity 
 public class Commentaire {
 	
-	@Id @GeneratedValue(strategy=GenerationType.AUTO) 
-	private int idCom;
+	@Id 
+	@GeneratedValue(strategy=GenerationType.IDENTITY) 
+	private int id;
 	private String message;
-	@ManyToOne
-	private Bug bug;
+	private String titre;
 	
 	@ManyToOne
-	private Developpeur dev;
 	
-	@Temporal(TemporalType.DATE)
-	private Date dateCom;
+    private Bug bug;
+
+    @ManyToOne
+	//@JsonIgnoreProperties({"bug", "commentaire"})
+    private Developpeur developpeur;
+    
+	//@Temporal(TemporalType.DATE)
+	//private Date dateCom;
 	
-	public int getIdCom() {
-		return idCom;
-	}
-
-	public void setIdCom(int idCom) {
-		this.idCom = idCom;
-	}
-
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
-
-	public Bug getBug() {
-		return bug;
-	}
-
-	public void setBug(Bug bug) {
-		this.bug = bug;
-	}
-
-	public Developpeur getDev() {
-		return dev;
-	}
-
-	public void setDev(Developpeur dev) {
-		this.dev = dev;
-	}
-
-	public Date getDateCom() {
-		return dateCom;
-	}
-
-	public void setDateCom(Date dateCom) {
-		this.dateCom = dateCom;
-	}
 
 }

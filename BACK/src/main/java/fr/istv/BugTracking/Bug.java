@@ -12,6 +12,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -28,18 +30,25 @@ import lombok.Setter;
 @Entity //JPA
 public class Bug {
 	@Id
-	private int idBug;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
 	private String titre;
 	private String description;
 	private String priorite;
 	private String etat;
-	@Temporal(TemporalType.DATE)
-	private Date dateCreation;
-	@ManyToOne
-	private Developpeur dev;
+	//@Temporal(TemporalType.DATE)
+	//private Date dateCreation;
 	
-	@OneToMany
-    private List<Commentaire> commentaire;
+	    
+	    @JsonIgnoreProperties({"commentaire"})
+	    
+	    @ManyToOne
+	    private Developpeur developpeur;
+	    
+	    @OneToMany
+	
+	    private List<Commentaire> commentaire;
+
 	
 
 	

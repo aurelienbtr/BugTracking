@@ -1,7 +1,5 @@
-package repositories;
+package fr.istv.BugTracking.repositories;
 
-
-import fr.istv.BugTracking.Commentaire;
 import fr.istv.BugTracking.Developpeur;
 import org.springframework.data.jpa.repository.JpaRepository;
 

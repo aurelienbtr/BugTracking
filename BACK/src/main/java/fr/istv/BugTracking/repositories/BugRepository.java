@@ -1,4 +1,4 @@
-package repositories;
+package fr.istv.BugTracking.repositories;
 import java.util.Optional;
 
 import fr.istv.BugTracking.Bug;

@@ -1,4 +1,4 @@
-package exception;
+package fr.istv.BugTracking.exception;
 
 
 import org.springframework.http.HttpStatus;

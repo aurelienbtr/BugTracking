@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -25,14 +27,15 @@ import lombok.Setter;
 @Entity
 
 public class Developpeur {
-	 @Id @GeneratedValue(strategy=GenerationType.IDENTITY) 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idDev;
 	private String nom;
 	private String avatar; 
-	@OneToMany
-    private List<Bug> bug;
-    @OneToMany
-    private List<Commentaire> commentaire;
-
+	@JsonIgnoreProperties({"bug", "commentaire"})
 	
+	@OneToMany
+	private List<Bug> bug;
+	@OneToMany
+	private List<Commentaire> commentaire;
 }

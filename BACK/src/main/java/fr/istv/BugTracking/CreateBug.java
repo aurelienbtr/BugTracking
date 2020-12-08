@@ -3,7 +3,9 @@ package fr.istv.BugTracking;
 import java.util.Date;
 import java.util.List;
 
-//import javax.persistence.Temporal;
+
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,8 +22,8 @@ public class CreateBug {
     private String priorite;
     private String etat;
 
-    //@Temporal(TemporalType.DATE)
-    private Date dateCreation;
-    private Developpeur dev;
+//    @Temporal(TemporalType.DATE)
+  //  private Date dateCreation;
+    private Developpeur developpeur;
     private List<Commentaire> commentaire;
 }

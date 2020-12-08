@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class CreateDeveloppeur {
     private String nom;
     private String avatar;
-   // private List<Bug> bug;
-   // private List<Commentaire> commentaire;
+  	private List<Bug> bug;
+  	private List<Commentaire> commentaire;
 }
 
