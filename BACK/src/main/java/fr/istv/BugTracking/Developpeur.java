@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -36,7 +37,9 @@ public class Developpeur {
 	@JsonIgnoreProperties({"bug", "commentaire"}) // qd on cree un dev avec Postman en Json, pas besoin de rentrer ca
 	
 	@OneToMany(mappedBy = "developpeur")
+	@JsonManagedReference //empeche les "infinis"
 	private List<Bug> bug;
 	@OneToMany(mappedBy = "developpeur")
+	@JsonManagedReference //empeche les "infinis"
 	private List<Commentaire> commentaire;
 }

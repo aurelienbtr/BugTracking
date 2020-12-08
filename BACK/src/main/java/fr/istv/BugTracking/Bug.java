@@ -12,7 +12,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -43,10 +45,11 @@ public class Bug {
 	    @JsonIgnoreProperties({"commentaire"})
 	    
 	    @ManyToOne
+	    @JsonBackReference
 	    private Developpeur developpeur;
 	    
 	    @OneToMany
-	
+	 @JsonManagedReference //empeche les "infinis"
 	    private List<Commentaire> commentaire;
 
 	
