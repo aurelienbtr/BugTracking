@@ -44,11 +44,12 @@ public class BugController {
         return bugsRepository.findById(id).orElse(null);
     }
     
-    // Affiche la liste de tout les bus
+    // Affiche la liste de tout les bug
     @GetMapping("bug")
     public List<Bug> getAllBugs() {
     	return bugsRepository.findAll();
     }
+   
     
     //Permet d'ajouter un bug
     @PostMapping("bug")
@@ -85,7 +86,7 @@ public class BugController {
    //	bugsRepository.deleteById(id);
 
    //}
-    @GetMapping("bug/datedebut/datefin")
+    @GetMapping("bug/date")
     public List<Bug> getBugBetweenTwoDate(@RequestParam("datedebut") @DateTimeFormat(pattern="yyyy-MM-dd")Date datedebut,
                                   @RequestParam("datefin") @DateTimeFormat(pattern = "yyyy-MM-dd") Date datefin){
         return bugsRepository.findBugByDate(datedebut,datefin);
