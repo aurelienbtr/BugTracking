@@ -41,11 +41,15 @@ public class Bug {
 	private String titre;
 	private String description;
 	
-	@Enumerated(EnumType.STRING) //HAUTE BASSE NORMAL
-	private BugPriorite priorite;
+	//@Enumerated(EnumType.STRING) //HAUTE BASSE NORMAL
+	//private BugPriorite priorite;
+	
+	private String priorite;
 
-	@Enumerated(EnumType.STRING) // T ODO, ENCOURS, TERMINE;
-	private BugEtat etat;
+	//@Enumerated(EnumType.STRING) // T ODO, ENCOURS, TERMINE;
+	//private BugEtat etat;
+	private String etat;
+
 	
 	
 	@Temporal(TemporalType.DATE)

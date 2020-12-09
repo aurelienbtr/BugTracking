@@ -19,9 +19,10 @@ import fr.istv.BugTracking.enumeration.*;
 public class CreateBug {
     private String titre;
     private String description;
-    private BugPriorite priorite;
-    private BugEtat etat;
-
+    //private BugPriorite priorite;
+    //private BugEtat etat;
+    private String priorite;
+    private String etat;
   @Temporal(TemporalType.DATE)
    private Date datecreation;
     private Developpeur developpeur;

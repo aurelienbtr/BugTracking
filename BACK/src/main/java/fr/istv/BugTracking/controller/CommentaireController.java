@@ -31,11 +31,6 @@ public class CommentaireController {
     @Autowired
     DeveloppeurRepository devsRepository;
 
-    //Affiche les Devs en fonction de leur titre
-   // @GetMapping("commentaire/{titre}")
-    //public Commentaire getCommentaire(@PathVariable("titre") String titre) {
-      //  return comRepository.findByString(titre).orElse(null);
-    //}
     
     // Affiche la liste de tout les dev
     @GetMapping("commentaire")
@@ -73,5 +68,6 @@ public class CommentaireController {
                     return ResponseEntity.ok().build();
                 }).orElseThrow(() -> new ResourceNotFoundException("Pas de commentaire numero " + id));
     }
-   
+
+    
 }
