@@ -68,24 +68,24 @@ public class BugController {
         );
     }
     
-    @DeleteMapping("bug/{id}")
-    public ResponseEntity<?> deleteBugs(@PathVariable("id") Integer id) {
-        if(!bugsRepository.existsById(id)) {
-            throw new ResourceNotFoundException("Pas de bug numero " + id);
-        }
-
-        return bugsRepository.findById(id)
-                .map(bug -> {
-                    bugsRepository.delete(bug);
-                    return ResponseEntity.ok().build();
-                }).orElseThrow(() -> new ResourceNotFoundException("Pas de bug numero " + id));
-    }
-    
    // @DeleteMapping("bug/{id}")
-   // public void deleteBug(@PathVariable Integer id){
-   //	bugsRepository.deleteById(id);
+   // public ResponseEntity<?> deleteBugs(@PathVariable("id") Integer id) {
+    //    if(!bugsRepository.existsById(id)) {
+   //         throw new ResourceNotFoundException("Pas de bug numero " + id);
+   //     }
 
-   //}
+     //   return bugsRepository.findById(id)
+     //           .map(bug -> {
+      //             bugsRepository.delete(bug);
+       //             return ResponseEntity.ok().build();
+         //       }).orElseThrow(() -> new ResourceNotFoundException("Pas de bug numero " + id));
+   // }
+    
+    @DeleteMapping("bug/{id}")
+    public void deleteBug(@PathVariable Integer id){
+   	bugsRepository.deleteById(id);
+
+   }
     @GetMapping("bug/date")
     public List<Bug> getBugBetweenTwoDate(@RequestParam("datedebut") @DateTimeFormat(pattern="yyyy-MM-dd")Date datedebut,
                                   @RequestParam("datefin") @DateTimeFormat(pattern = "yyyy-MM-dd") Date datefin){

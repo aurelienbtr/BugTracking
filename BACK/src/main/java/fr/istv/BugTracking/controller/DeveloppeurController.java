@@ -61,18 +61,27 @@ public class DeveloppeurController {
     }
     
     
-    @DeleteMapping("developpeur/{id}")
-    public ResponseEntity<?> deleteDeveloppeur(@PathVariable("id") Integer id) {
-        if(!devsRepository.existsById(id)) {
-            throw new ResourceNotFoundException("Il n'y a pas de developpeur avec l'id" + id);
-        }
+  //  @DeleteMapping("developpeur/{id}")
+  //  public ResponseEntity<?> deleteDeveloppeur(@PathVariable("id") Integer id) {
+  //      if(!devsRepository.existsById(id)) {
+  //          throw new ResourceNotFoundException("Il n'y a pas de developpeur avec l'id" + id);
+  //      }
 
-        return devsRepository.findById(id)
-        		.map(dev -> {
-                	devsRepository.delete(dev);
-                    return ResponseEntity.ok().build();
-                }).orElseThrow(() -> new ResourceNotFoundException("Il n'y a pas de developpeur avec l'id" + id));
-    }
+  //      return devsRepository.findById(id)
+  //      		.map(dev -> {
+  //              	devsRepository.delete(dev);
+  //                  return ResponseEntity.ok().build();
+  //              }).orElseThrow(() -> new ResourceNotFoundException("Il n'y a pas de developpeur avec l'id" + id));
+  //  }
     
-   
+    @DeleteMapping("/developpeur/{id}")
+    public void deleteDeveloppeur(@PathVariable("id") Integer id) {
+        
+    	if(devsRepository.existsById(id))
+    		{
+    		devsRepository.deleteById(id);
+
+    		}
+    
+    }
 }

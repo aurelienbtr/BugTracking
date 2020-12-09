@@ -63,7 +63,7 @@ public class Bug {
 	    private Developpeur developpeur;
 	    
 	    @OneToMany
-	 @JsonManagedReference //empeche les "infinis"
+	   @JsonManagedReference //empeche les "infinis"
 	    private List<Commentaire> commentaire;
 
 	

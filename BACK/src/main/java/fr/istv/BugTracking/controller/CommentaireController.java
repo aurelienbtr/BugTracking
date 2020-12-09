@@ -56,18 +56,23 @@ public class CommentaireController {
     }
     
     
+ //   @DeleteMapping("commentaire/{id}")
+//    public ResponseEntity<?> deleteCommentaire(@PathVariable("id") Integer id) {
+  //      if(!comRepository.existsById(id)) {
+  //          throw new ResourceNotFoundException("Pas de commentaire numero " + id);
+  //      }
+
+  //      return comRepository.findById(id)
+  //              .map(com -> {
+  //              	comRepository.delete(com);
+  //                  return ResponseEntity.ok().build();
+ //               }).orElseThrow(() -> new ResourceNotFoundException("Pas de commentaire numero " + id));
+ //   }
+
     @DeleteMapping("commentaire/{id}")
-    public ResponseEntity<?> deleteCommentaire(@PathVariable("id") Integer id) {
-        if(!comRepository.existsById(id)) {
-            throw new ResourceNotFoundException("Pas de commentaire numero " + id);
-        }
+    public void deleteBug(@PathVariable Integer id){
+        comRepository.deleteById(id);
 
-        return comRepository.findById(id)
-                .map(com -> {
-                	comRepository.delete(com);
-                    return ResponseEntity.ok().build();
-                }).orElseThrow(() -> new ResourceNotFoundException("Pas de commentaire numero " + id));
     }
-
     
 }
