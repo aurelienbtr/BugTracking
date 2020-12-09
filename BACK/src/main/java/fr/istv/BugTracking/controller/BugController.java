@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.http.ResponseEntity;
+//import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import fr.istv.BugTracking.*;
-import fr.istv.BugTracking.exception.ResourceNotFoundException;
+//import fr.istv.BugTracking.exception.ResourceNotFoundException;
 import fr.istv.BugTracking.repositories.*;
 @RestController
 public class BugController {
@@ -52,6 +52,7 @@ public class BugController {
    
     
     //Permet d'ajouter un bug
+    
     @PostMapping("bug")
     public Bug AddBug(@Validated @RequestBody CreateBug bug){
        Date datecrea = new Date(0);
@@ -68,19 +69,7 @@ public class BugController {
         );
     }
     
-   // @DeleteMapping("bug/{id}")
-   // public ResponseEntity<?> deleteBugs(@PathVariable("id") Integer id) {
-    //    if(!bugsRepository.existsById(id)) {
-   //         throw new ResourceNotFoundException("Pas de bug numero " + id);
-   //     }
 
-     //   return bugsRepository.findById(id)
-     //           .map(bug -> {
-      //             bugsRepository.delete(bug);
-       //             return ResponseEntity.ok().build();
-         //       }).orElseThrow(() -> new ResourceNotFoundException("Pas de bug numero " + id));
-   // }
-    
     @DeleteMapping("bug/{id}")
     public void deleteBug(@PathVariable Integer id){
    	bugsRepository.deleteById(id);
