@@ -19,4 +19,8 @@ public interface BugRepository extends JpaRepository<Bug, Integer> {
     
     //@Query("SELECT b FROM Bug b WHERE b.dateC > ?1 AND b.dateC < ?2")
    // List<Bug> findBugByDate(Date debut,Date fin);
+    
+    
+    @Query("SELECT b FROM Bug b WHERE b.titre LIKE %?1%")
+    List<Bug> findBugByTitle(String titre);
 }

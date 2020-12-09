@@ -91,4 +91,10 @@ public class BugController {
         return bugsRepository.findBugByDate(datedebut,datefin);
     }
     
+    @GetMapping("bug/titre")
+    public List<Bug> getBugByTitle(@RequestParam("titre") String titre) {
+    	return bugsRepository.findBugByTitle(titre);
+    }
+   
+
 }

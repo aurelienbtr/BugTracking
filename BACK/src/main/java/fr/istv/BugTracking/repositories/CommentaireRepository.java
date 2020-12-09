@@ -10,7 +10,5 @@ import java.util.Optional;
 
 public interface CommentaireRepository extends JpaRepository<Commentaire, Integer> {
     Optional<Commentaire> findById(Integer id);
-    
-    @Query("SELECT c FROM Commentaire c WHERE c.titre LIKE %?1%")
-    List<Commentaire> findCommentaireByTitle(String titre);
+
 }
