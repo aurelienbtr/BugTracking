@@ -23,7 +23,11 @@ import org.springframework.http.ResponseEntity;
 
 //import fr.istv.BugTracking.exception.ResourceNotFoundException;
 import fr.istv.BugTracking.repositories.*;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+@Api(description = "Gestion des developpeurs")
 @RestController
+
 public class BugController {
 
     @Autowired
@@ -42,19 +46,21 @@ public class BugController {
         }
     
 
-    //Affiche les bugs en fonction de leur id
+    @ApiOperation(value="Affiche les bugs en fonction de leur id")
+    
     @GetMapping("bug/{id}")
     public Bug getBugs(@PathVariable("id") Integer id) {
         return bugsRepository.findById(id).orElse(null);
     }
     
-    // Affiche la liste de tout les bug
+    @ApiOperation(value="Affiche tout les bugs")
+    
     @GetMapping("bug")
     public List<Bug> getAllBugs() {
     	return bugsRepository.findAll();
     }
    
-    // on ajoute un bug sans developpeur ni commentaire
+    @ApiOperation(value="Permet de cree un bug sans commentaire ni developpeur (inutile seule)")
     @PostMapping("bug")
     public Bug createBug(@Validated @RequestBody CreateBug bug){
     	Date datecrea = new Date();
@@ -71,7 +77,8 @@ public class BugController {
                 .build()
         );
     }
-    //Permet d'ajouter un developpeur a un bug deja existant
+    
+    @ApiOperation(value="Permet d'ajouter un developpeur a un bug")
     
     @PutMapping("bug/{id}/dev/{iddev}")
     public ResponseEntity<?> ajoutDev(@PathVariable("id") Integer id,@PathVariable("iddev") Integer iddev){
@@ -91,28 +98,36 @@ public class BugController {
         
         }
 
-
+    @ApiOperation(value="Permet de supprimer un bug avec son identifiant")
+    
     @DeleteMapping("bug/{id}")
     public void deleteBug(@PathVariable Integer id){
    	bugsRepository.deleteById(id);
 
    }
+    
+    @ApiOperation(value="Permet de filtrer les bugs entre deux dates")
     @GetMapping("bug/date")
     public List<Bug> getBugBetweenTwoDate(@RequestParam("datedebut") @DateTimeFormat(pattern="yyyy-MM-dd")Date datedebut,
                                   @RequestParam("datefin") @DateTimeFormat(pattern = "yyyy-MM-dd") Date datefin){
         return bugsRepository.findBugByDate(datedebut,datefin);
     }
     
+    @ApiOperation(value="Permet de filtrer les bugs par leur titre (recherche)")
     @GetMapping("bug/titre")
     public List<Bug> getBugByTitle(@RequestParam("titre") String titre) {
     	return bugsRepository.findBugByTitle(titre);
     }
-   
+    
+    
+    @ApiOperation(value="Permet de filtrer les bugs par leur etat (recherche)")
     @GetMapping("bug/etat")
     public List<Bug> getBugByEtat(@RequestParam("etat") String etat) {
     	return bugsRepository.findBugByEtat(etat);
     }
     
+    
+    @ApiOperation(value="Permet de filtrer les bugs par leur priorite (recherche)")
     @GetMapping("bug/priorite")
     public List<Bug> getBugByPriorite(@RequestParam("priorite") String priorite) {
     	return bugsRepository.findBugByPriorite(priorite);

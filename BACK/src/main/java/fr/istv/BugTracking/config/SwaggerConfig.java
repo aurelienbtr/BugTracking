@@ -22,8 +22,8 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("fr.uphf.bugtrackingweb.controller"))
-                .paths(PathSelectors.any())
+               // .apis(RequestHandlerSelectors.basePackage("fr.istv.BugTracking"))
+               // .paths(PathSelectors.any())
                 .build();
     }
 

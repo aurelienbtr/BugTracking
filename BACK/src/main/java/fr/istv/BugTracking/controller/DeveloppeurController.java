@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.istv.BugTracking.*;
 //import fr.istv.BugTracking.exception.ResourceNotFoundException;
 import fr.istv.BugTracking.repositories.*;
+import io.swagger.annotations.ApiOperation;
 
 
 @RestController
@@ -32,19 +33,19 @@ public class DeveloppeurController {
     @Autowired
     DeveloppeurRepository devsRepository;
 
-    //Affiche les Devs en fonction de leur id (ca marche)
+    @ApiOperation(value="Permet d'afficher un developpeur par son identifiant")
     @GetMapping("/developpeur/{id}")
     public Developpeur getDeveloppeur(@PathVariable("id") Integer id) {
         return devsRepository.findById(id).orElse(null);
     }
     
-    // Affiche la liste de tout les dev(ca marche)
+    @ApiOperation(value="Permet d'afficher la liste des developpeurs")
     @GetMapping("/developpeur")
     public List<Developpeur> getAllDeveloppeur() {
     	return devsRepository.findAll();
     }
     
-    //Permet d'ajouter un dev
+    @ApiOperation(value="Permet de creer un developpeur")
     @RequestMapping(value = "/developpeur", method =  RequestMethod.POST)
     public Developpeur AddDev(@Validated @RequestBody CreateDeveloppeur dev){
     	
@@ -60,7 +61,7 @@ public class DeveloppeurController {
     }
     
    
-    
+    @ApiOperation(value="Permet de supprimer un developpeur par son id")
     @DeleteMapping("/developpeur/{id}")
     public void deleteDeveloppeur(@PathVariable("id") Integer id) {
         

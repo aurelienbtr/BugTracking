@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.istv.BugTracking.*;
 import fr.istv.BugTracking.exception.ResourceNotFoundException;
 import fr.istv.BugTracking.repositories.*;
+import io.swagger.annotations.ApiOperation;
 
 
 @RestController
@@ -32,13 +33,15 @@ public class CommentaireController {
     DeveloppeurRepository devsRepository;
 
     
-    // Affiche la liste de tout les dev
+    @ApiOperation(value="Permet de lister tout les commentaires")
     @GetMapping("commentaire")
     public List<Commentaire> getAllCommentaire() {
     	return comRepository.findAll();
     }
     
-    //Permet d'ajouter un commentaire a un bug par un developpeur
+    
+    @ApiOperation(value="Permet d'ajouter un commentaire a un bug par un developpeur")
+    
     
     @PostMapping("/com/bug/{id}/dev/{iddev}")
     public ResponseEntity<?> ajoutCom(@PathVariable("id") int id, @PathVariable("iddev") int iddev,@Validated @RequestBody CreateCommentaire com) {
@@ -60,7 +63,8 @@ public class CommentaireController {
             );
             return ResponseEntity.ok(com);
         }
-        
+     
+    @ApiOperation(value="Permet de supprimer un commentaire par son Identifiant")
     @DeleteMapping("commentaire/{id}")
     public void deleteBug(@PathVariable Integer id){
         comRepository.deleteById(id);
