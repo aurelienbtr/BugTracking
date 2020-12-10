@@ -38,4 +38,7 @@
     <fullyQualifiedTypeName name="fr.istv.BugTracking.enumeration.BugPriorite"/>
     <fullyQualifiedTypeName name="fr.istv.BugTracking.enumeration.BugEtat"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="io.swagger.annotations.Api"/>
+    <fullyQualifiedTypeName name="io.swagger.annotations.ApiOperation"/>
+    <fullyQualifiedTypeName name="io.swagger.annotations.ApiModelProperty"/>
 </qualifiedTypeNameHistroy>

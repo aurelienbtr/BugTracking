@@ -19,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import fr.istv.BugTracking.*;
+import fr.istv.BugTracking.exception.BugIntrouvableException;
+
 import org.springframework.http.ResponseEntity;
 
 //import fr.istv.BugTracking.exception.ResourceNotFoundException;
@@ -49,9 +51,15 @@ public class BugController {
     @ApiOperation(value="Affiche les bugs en fonction de leur id")
     
     @GetMapping("bug/{id}")
-    public Bug getBugs(@PathVariable("id") Integer id) {
-        return bugsRepository.findById(id).orElse(null);
+    public Optional<Bug> getBugs(@PathVariable("id") Integer id) {
+    	
+    	Optional<Bug> bugs = bugsRepository.findById(id);
+    	if(bugs==null) throw new BugIntrouvableException("Le bug avec l'id " + id + " est inexistant.");
+    	
+
+        return bugs;
     }
+    
     
     @ApiOperation(value="Affiche tout les bugs")
     

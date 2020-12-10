@@ -2,6 +2,7 @@ package fr.istv.BugTracking;
 
 import org.springframework.boot.SpringApplication;
 
+
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,6 +13,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan({"fr.istv.BugTracking.controller"})
+
+@ComponentScan({"fr.istv.BugTracking.config"})
 @SpringBootApplication
 
 @EnableSwagger2
