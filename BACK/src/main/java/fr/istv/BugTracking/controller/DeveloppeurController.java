@@ -53,8 +53,8 @@ public class DeveloppeurController {
                 .builder()
                 .nom(dev.getNom())
                 .avatar(dev.getAvatar())
-                .bug(dev.getBug())
-                .commentaire(dev.getCommentaire())
+              //  .bug(dev.getBug())
+              //  .commentaire(dev.getCommentaire())
                 .build()
         );
     }

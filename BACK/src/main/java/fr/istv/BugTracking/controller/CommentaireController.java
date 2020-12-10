@@ -38,37 +38,29 @@ public class CommentaireController {
     	return comRepository.findAll();
     }
     
-    //Permet d'ajouter un commentaire
-    @PostMapping("commentaire")
-    public Commentaire AddCom(@Validated @RequestBody CreateCommentaire com){
-    	 Date datecrea = new Date();
-    	
-        return comRepository.save(
-                Commentaire
-                .builder()
-                .message(com.getMessage())
-                .titre(com.getTitre())
-                .datecom(datecrea)
-                .bug(com.getBug())
-                .developpeur(com.getDev())
-                .build()
-        );
-    }
+    //Permet d'ajouter un commentaire a un bug par un developpeur
     
-    
- //   @DeleteMapping("commentaire/{id}")
-//    public ResponseEntity<?> deleteCommentaire(@PathVariable("id") Integer id) {
-  //      if(!comRepository.existsById(id)) {
-  //          throw new ResourceNotFoundException("Pas de commentaire numero " + id);
-  //      }
-
-  //      return comRepository.findById(id)
-  //              .map(com -> {
-  //              	comRepository.delete(com);
-  //                  return ResponseEntity.ok().build();
- //               }).orElseThrow(() -> new ResourceNotFoundException("Pas de commentaire numero " + id));
- //   }
-
+    @PostMapping("/com/bug/{id}/dev/{iddev}")
+    public ResponseEntity<?> ajoutCom(@PathVariable("id") int id, @PathVariable("iddev") int iddev,@Validated @RequestBody CreateCommentaire com) {
+    	Date datecom = new Date();
+            Bug bugaCommente = this.bugsRepository.findById(id).map(bugExistant -> {
+                return bugExistant;
+            }).orElseThrow(() -> new RuntimeException("Bug non trouvé"));
+            Developpeur devQuiCommente = this.devsRepository.findById(id).map(devExistant -> {
+                return devExistant;
+            }).orElseThrow(() -> new RuntimeException("Dev non trouvé"));
+            comRepository.save(
+                    Commentaire
+                            .builder()
+                            .message(com.getMessage())
+                            .developpeur(devQuiCommente)
+                            .datecom((datecom))
+                            .bug(bugaCommente)
+                            .build()
+            );
+            return ResponseEntity.ok(com);
+        }
+        
     @DeleteMapping("commentaire/{id}")
     public void deleteBug(@PathVariable Integer id){
         comRepository.deleteById(id);

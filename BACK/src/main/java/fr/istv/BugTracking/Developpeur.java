@@ -36,10 +36,11 @@ public class Developpeur {
 	
 	@JsonIgnoreProperties({"bug", "commentaire"}) // qd on cree un dev avec Postman en Json, pas besoin de rentrer ca
 	
-	@OneToMany(mappedBy = "developpeur")
+	@OneToMany (mappedBy = "developpeur")
 	@JsonManagedReference //empeche les "infinis"
+	
 	private List<Bug> bug;
-	@OneToMany(mappedBy = "developpeur")
+	@OneToMany (mappedBy = "developpeur")
 	@JsonManagedReference //empeche les "infinis"
 	private List<Commentaire> commentaire;
 }

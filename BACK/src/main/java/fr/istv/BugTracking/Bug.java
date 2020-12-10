@@ -56,17 +56,15 @@ public class Bug {
 	private Date datecreation;
 	
 	    
-	    @JsonIgnoreProperties({"commentaire"})
-	    
 	    @ManyToOne
 	    @JsonBackReference
+	    
 	    private Developpeur developpeur;
 	    
 	    @OneToMany
-	   @JsonManagedReference //empeche les "infinis"
+	    @JsonManagedReference //empeche les "infinis"
+	   //  @JsonIgnoreProperties({"commentaire"})
 	    private List<Commentaire> commentaire;
-
-	
 
 	
 }

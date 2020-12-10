@@ -37,4 +37,5 @@
     <fullyQualifiedTypeName name="javax.persistence.EnumType"/>
     <fullyQualifiedTypeName name="fr.istv.BugTracking.enumeration.BugPriorite"/>
     <fullyQualifiedTypeName name="fr.istv.BugTracking.enumeration.BugEtat"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
 </qualifiedTypeNameHistroy>
