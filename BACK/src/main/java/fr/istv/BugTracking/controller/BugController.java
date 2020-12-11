@@ -4,6 +4,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 //import org.springframework.http.ResponseEntity;
@@ -71,7 +74,6 @@ public class BugController {
     @ApiOperation(value="Permet de cree un bug sans commentaire ni developpeur (inutile seule)")
     @PostMapping("bug")
     public Bug createBug(@Validated @RequestBody CreateBug bug){
-    	Date datecrea = new Date();
         return bugsRepository.save(
                 Bug
                 .builder()
@@ -79,7 +81,7 @@ public class BugController {
                 .description(bug.getDescription())
                 .priorite(bug.getPriorite())
                 .etat(bug.getEtat())
-                .datecreation(datecrea)
+                .datecreation(bug.getDatecreation())
                 //.developpeur(bug.getDeveloppeur())
                 //.commentaire(bug.getCommentaires())
                 .build()
