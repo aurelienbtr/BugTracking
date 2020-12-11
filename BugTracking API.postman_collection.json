@@ -1,0 +1,2859 @@
+{
+	"info": {
+		"_postman_id": "4b74b014-5e76-4698-931d-eead7652539f",
+		"name": "BugTracking API",
+		"description": "API to manage bugs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "bug",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Affiche les bugs en fonction de leur id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/bug/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bug",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/bug/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bug",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/bug/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bug",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/bug/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bug",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Permet de supprimer un bug avec son identifiant",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/bug/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bug",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/bug/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bug",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/bug/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bug",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/bug/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bug",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Permet d'ajouter un developpeur a un bug",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/:id/dev/:iddev",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										":id",
+										"dev",
+										":iddev"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) id"
+										},
+										{
+											"key": "iddev",
+											"value": "<integer>",
+											"description": "(Required) iddev"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/bug/:id/dev/:iddev",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bug",
+												":id",
+												"dev",
+												":iddev"
+											],
+											"variable": [
+												{
+													"key": "id"
+												},
+												{
+													"key": "iddev"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/bug/:id/dev/:iddev",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bug",
+												":id",
+												"dev",
+												":iddev"
+											],
+											"variable": [
+												{
+													"key": "id"
+												},
+												{
+													"key": "iddev"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/bug/:id/dev/:iddev",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bug",
+												":id",
+												"dev",
+												":iddev"
+											],
+											"variable": [
+												{
+													"key": "id"
+												},
+												{
+													"key": "iddev"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/bug/:id/dev/:iddev",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bug",
+												":id",
+												"dev",
+												":iddev"
+											],
+											"variable": [
+												{
+													"key": "id"
+												},
+												{
+													"key": "iddev"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/bug/:id/dev/:iddev",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bug",
+												":id",
+												"dev",
+												":iddev"
+											],
+											"variable": [
+												{
+													"key": "id"
+												},
+												{
+													"key": "iddev"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Affiche tout les bugs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/bug",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bug"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Permet de cree un bug sans commentaire ni developpeur (inutile seule)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"datecreation\": \"<dateTime>\",\n    \"description\": \"<string>\",\n    \"etat\": \"<string>\",\n    \"priorite\": \"<string>\",\n    \"titre\": \"<string>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/bug",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bug"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"datecreation\": \"<dateTime>\",\n    \"description\": \"<string>\",\n    \"etat\": \"<string>\",\n    \"priorite\": \"<string>\",\n    \"titre\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bug",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"datecreation\": \"<dateTime>\",\n    \"description\": \"<string>\",\n    \"etat\": \"<string>\",\n    \"priorite\": \"<string>\",\n    \"titre\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bug",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"datecreation\": \"<dateTime>\",\n    \"description\": \"<string>\",\n    \"etat\": \"<string>\",\n    \"priorite\": \"<string>\",\n    \"titre\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bug",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"datecreation\": \"<dateTime>\",\n    \"description\": \"<string>\",\n    \"etat\": \"<string>\",\n    \"priorite\": \"<string>\",\n    \"titre\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bug",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"datecreation\": \"<dateTime>\",\n    \"description\": \"<string>\",\n    \"etat\": \"<string>\",\n    \"priorite\": \"<string>\",\n    \"titre\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bug",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Permet de filtrer les bugs entre deux dates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/bug/date?datedebut=<dateTime>&datefin=<dateTime>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bug",
+								"date"
+							],
+							"query": [
+								{
+									"key": "datedebut",
+									"value": "<dateTime>",
+									"description": "(Required) datedebut"
+								},
+								{
+									"key": "datefin",
+									"value": "<dateTime>",
+									"description": "(Required) datefin"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/date?datedebut=<dateTime>&datefin=<dateTime>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"date"
+									],
+									"query": [
+										{
+											"key": "datedebut",
+											"value": "<dateTime>"
+										},
+										{
+											"key": "datefin",
+											"value": "<dateTime>"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/date?datedebut=<dateTime>&datefin=<dateTime>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"date"
+									],
+									"query": [
+										{
+											"key": "datedebut",
+											"value": "<dateTime>"
+										},
+										{
+											"key": "datefin",
+											"value": "<dateTime>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/date?datedebut=<dateTime>&datefin=<dateTime>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"date"
+									],
+									"query": [
+										{
+											"key": "datedebut",
+											"value": "<dateTime>"
+										},
+										{
+											"key": "datefin",
+											"value": "<dateTime>"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/date?datedebut=<dateTime>&datefin=<dateTime>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"date"
+									],
+									"query": [
+										{
+											"key": "datedebut",
+											"value": "<dateTime>"
+										},
+										{
+											"key": "datefin",
+											"value": "<dateTime>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Permet de filtrer les bugs par leur etat (recherche)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/bug/etat?etat=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bug",
+								"etat"
+							],
+							"query": [
+								{
+									"key": "etat",
+									"value": "<string>",
+									"description": "(Required) etat"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/etat?etat=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"etat"
+									],
+									"query": [
+										{
+											"key": "etat",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/etat?etat=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"etat"
+									],
+									"query": [
+										{
+											"key": "etat",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/etat?etat=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"etat"
+									],
+									"query": [
+										{
+											"key": "etat",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/etat?etat=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"etat"
+									],
+									"query": [
+										{
+											"key": "etat",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Permet de filtrer les bugs par leur priorite (recherche)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/bug/priorite?priorite=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bug",
+								"priorite"
+							],
+							"query": [
+								{
+									"key": "priorite",
+									"value": "<string>",
+									"description": "(Required) priorite"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/priorite?priorite=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"priorite"
+									],
+									"query": [
+										{
+											"key": "priorite",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/priorite?priorite=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"priorite"
+									],
+									"query": [
+										{
+											"key": "priorite",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/priorite?priorite=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"priorite"
+									],
+									"query": [
+										{
+											"key": "priorite",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/priorite?priorite=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"priorite"
+									],
+									"query": [
+										{
+											"key": "priorite",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Permet de filtrer les bugs par leur titre (recherche)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/bug/titre?titre=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bug",
+								"titre"
+							],
+							"query": [
+								{
+									"key": "titre",
+									"value": "<string>",
+									"description": "(Required) titre"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/titre?titre=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"titre"
+									],
+									"query": [
+										{
+											"key": "titre",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/titre?titre=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"titre"
+									],
+									"query": [
+										{
+											"key": "titre",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/titre?titre=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"titre"
+									],
+									"query": [
+										{
+											"key": "titre",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/bug/titre?titre=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bug",
+										"titre"
+									],
+									"query": [
+										{
+											"key": "titre",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "commentaire",
+			"item": [
+				{
+					"name": "Permet de lister tout les commentaires",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/commentaire",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"commentaire"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/commentaire",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"commentaire"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/commentaire",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"commentaire"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/commentaire",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"commentaire"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/commentaire",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"commentaire"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Permet de supprimer un commentaire par son Identifiant",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/commentaire/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"commentaire",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "<integer>",
+									"description": "(Required) id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/commentaire/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"commentaire",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/commentaire/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"commentaire",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/commentaire/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"commentaire",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/commentaire/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"commentaire",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "developpeur",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Permet d'afficher un developpeur par son identifiant",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/developpeur/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"developpeur",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/developpeur/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"developpeur",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/developpeur/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"developpeur",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/developpeur/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"developpeur",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/developpeur/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"developpeur",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Permet de supprimer un developpeur par son id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/developpeur/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"developpeur",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/developpeur/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"developpeur",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/developpeur/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"developpeur",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/developpeur/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"developpeur",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/developpeur/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"developpeur",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Permet d'afficher la liste des developpeurs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/developpeur",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"developpeur"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/developpeur",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"developpeur"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/developpeur",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"developpeur"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/developpeur",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"developpeur"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/developpeur",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"developpeur"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Permet de creer un developpeur",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"avatar\": \"<string>\",\n    \"nom\": \"<string>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/developpeur",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"developpeur"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"avatar\": \"<string>\",\n    \"nom\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/developpeur",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"developpeur"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"avatar\": \"<string>\",\n    \"nom\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/developpeur",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"developpeur"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"avatar\": \"<string>\",\n    \"nom\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/developpeur",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"developpeur"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"avatar\": \"<string>\",\n    \"nom\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/developpeur",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"developpeur"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"avatar\": \"<string>\",\n    \"nom\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/developpeur",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"developpeur"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "listeBug",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/Buug",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"Buug"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/Buug",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Buug"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/Buug",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Buug"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/Buug",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Buug"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/Buug",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Buug"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"body": "dolor"
+				}
+			]
+		},
+		{
+			"name": "Permet d'ajouter un commentaire a un bug par un developpeur",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bug\": {\n        \"commentaire\": [\n            {\n                \"bug\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                \"datecom\": \"2018-11-06T12:42:48.622Z\",\n                \"developpeur\": {\n                    \"avatar\": \"tempor occaecat veniam\",\n                    \"bug\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        }\n                    ],\n                    \"commentaire\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        }\n                    ],\n                    \"idDev\": -96200565,\n                    \"nom\": \"culpa\"\n                },\n                \"id\": 94622957,\n                \"message\": \"do esse ea in\",\n                \"titre\": \"veniam aliquip in commodo nulla\"\n            },\n            {\n                \"bug\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                \"datecom\": \"1990-07-13T01:25:18.143Z\",\n                \"developpeur\": {\n                    \"avatar\": \"elit aliqua\",\n                    \"bug\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        }\n                    ],\n                    \"commentaire\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        }\n                    ],\n                    \"idDev\": -14658081,\n                    \"nom\": \"sint aute ad\"\n                },\n                \"id\": -96364661,\n                \"message\": \"deserunt occaecat eiusmod tempor\",\n                \"titre\": \"deserunt laboris do\"\n            }\n        ],\n        \"datecreation\": \"1956-05-07T14:49:33.272Z\",\n        \"description\": \"dolor labore veniam\",\n        \"developpeur\": {\n            \"avatar\": \"anim minim aliqua culp\",\n            \"bug\": [\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                }\n            ],\n            \"commentaire\": [\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                },\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                }\n            ],\n            \"idDev\": 24476626,\n            \"nom\": \"aute proident ut id\"\n        },\n        \"etat\": \"ex deserunt quis voluptate\",\n        \"id\": 24432579,\n        \"priorite\": \"Ut adipisicing cillum\",\n        \"titre\": \"sunt labore\"\n    },\n    \"datecom\": \"<dateTime>\",\n    \"dev\": {\n        \"avatar\": \"incididu\",\n        \"bug\": [\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n            },\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n            }\n        ],\n        \"commentaire\": [\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n            },\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n            }\n        ],\n        \"idDev\": -10775081,\n        \"nom\": \"commodo reprehenderit\"\n    },\n    \"message\": \"<string>\",\n    \"titre\": \"<string>\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/com/bug/:id/dev/:iddev",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"com",
+						"bug",
+						":id",
+						"dev",
+						":iddev"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "<integer>",
+							"description": "(Required) id"
+						},
+						{
+							"key": "iddev",
+							"value": "<integer>",
+							"description": "(Required) iddev"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bug\": {\n        \"commentaire\": [\n            {\n                \"bug\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                \"datecom\": \"1947-07-10T05:41:07.715Z\",\n                \"developpeur\": {\n                    \"avatar\": \"tempor laboris nulla\",\n                    \"bug\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        }\n                    ],\n                    \"commentaire\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        }\n                    ],\n                    \"idDev\": 10292405,\n                    \"nom\": \"enim tempor sed quis Ut\"\n                },\n                \"id\": 77136023,\n                \"message\": \"aliqua\",\n                \"titre\": \"do sint ad in\"\n            },\n            {\n                \"bug\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                \"datecom\": \"1963-10-18T18:31:40.681Z\",\n                \"developpeur\": {\n                    \"avatar\": \"Excepteur consequat\",\n                    \"bug\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        }\n                    ],\n                    \"commentaire\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        }\n                    ],\n                    \"idDev\": -92968082,\n                    \"nom\": \"aute reprehenderit\"\n                },\n                \"id\": 76730167,\n                \"message\": \"consectetur\",\n                \"titre\": \"adipisicing nisi\"\n            }\n        ],\n        \"datecreation\": \"1987-01-13T01:44:02.723Z\",\n        \"description\": \"qui ex a\",\n        \"developpeur\": {\n            \"avatar\": \"ea\",\n            \"bug\": [\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                }\n            ],\n            \"commentaire\": [\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                },\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                }\n            ],\n            \"idDev\": -64661504,\n            \"nom\": \"officia sed cillum voluptate velit\"\n        },\n        \"etat\": \"Excepteur\",\n        \"id\": 34763536,\n        \"priorite\": \"reprehenderit\",\n        \"titre\": \"magna deserunt eiusmod veniam\"\n    },\n    \"datecom\": \"<dateTime>\",\n    \"dev\": {\n        \"avatar\": \"laboris ut aliquip\",\n        \"bug\": [\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n            },\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n            }\n        ],\n        \"commentaire\": [\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n            },\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n            }\n        ],\n        \"idDev\": -10725368,\n        \"nom\": \"velit fugiat\"\n    },\n    \"message\": \"<string>\",\n    \"titre\": \"<string>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/com/bug/:id/dev/:iddev",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"com",
+								"bug",
+								":id",
+								"dev",
+								":iddev"
+							],
+							"variable": [
+								{
+									"key": "id"
+								},
+								{
+									"key": "iddev"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bug\": {\n        \"commentaire\": [\n            {\n                \"bug\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                \"datecom\": \"1947-07-10T05:41:07.715Z\",\n                \"developpeur\": {\n                    \"avatar\": \"tempor laboris nulla\",\n                    \"bug\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        }\n                    ],\n                    \"commentaire\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        }\n                    ],\n                    \"idDev\": 10292405,\n                    \"nom\": \"enim tempor sed quis Ut\"\n                },\n                \"id\": 77136023,\n                \"message\": \"aliqua\",\n                \"titre\": \"do sint ad in\"\n            },\n            {\n                \"bug\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                \"datecom\": \"1963-10-18T18:31:40.681Z\",\n                \"developpeur\": {\n                    \"avatar\": \"Excepteur consequat\",\n                    \"bug\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        }\n                    ],\n                    \"commentaire\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        }\n                    ],\n                    \"idDev\": -92968082,\n                    \"nom\": \"aute reprehenderit\"\n                },\n                \"id\": 76730167,\n                \"message\": \"consectetur\",\n                \"titre\": \"adipisicing nisi\"\n            }\n        ],\n        \"datecreation\": \"1987-01-13T01:44:02.723Z\",\n        \"description\": \"qui ex a\",\n        \"developpeur\": {\n            \"avatar\": \"ea\",\n            \"bug\": [\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                }\n            ],\n            \"commentaire\": [\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                },\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                }\n            ],\n            \"idDev\": -64661504,\n            \"nom\": \"officia sed cillum voluptate velit\"\n        },\n        \"etat\": \"Excepteur\",\n        \"id\": 34763536,\n        \"priorite\": \"reprehenderit\",\n        \"titre\": \"magna deserunt eiusmod veniam\"\n    },\n    \"datecom\": \"<dateTime>\",\n    \"dev\": {\n        \"avatar\": \"laboris ut aliquip\",\n        \"bug\": [\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n            },\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n            }\n        ],\n        \"commentaire\": [\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n            },\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n            }\n        ],\n        \"idDev\": -10725368,\n        \"nom\": \"velit fugiat\"\n    },\n    \"message\": \"<string>\",\n    \"titre\": \"<string>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/com/bug/:id/dev/:iddev",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"com",
+								"bug",
+								":id",
+								"dev",
+								":iddev"
+							],
+							"variable": [
+								{
+									"key": "id"
+								},
+								{
+									"key": "iddev"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bug\": {\n        \"commentaire\": [\n            {\n                \"bug\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                \"datecom\": \"1947-07-10T05:41:07.715Z\",\n                \"developpeur\": {\n                    \"avatar\": \"tempor laboris nulla\",\n                    \"bug\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        }\n                    ],\n                    \"commentaire\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        }\n                    ],\n                    \"idDev\": 10292405,\n                    \"nom\": \"enim tempor sed quis Ut\"\n                },\n                \"id\": 77136023,\n                \"message\": \"aliqua\",\n                \"titre\": \"do sint ad in\"\n            },\n            {\n                \"bug\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                \"datecom\": \"1963-10-18T18:31:40.681Z\",\n                \"developpeur\": {\n                    \"avatar\": \"Excepteur consequat\",\n                    \"bug\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        }\n                    ],\n                    \"commentaire\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        }\n                    ],\n                    \"idDev\": -92968082,\n                    \"nom\": \"aute reprehenderit\"\n                },\n                \"id\": 76730167,\n                \"message\": \"consectetur\",\n                \"titre\": \"adipisicing nisi\"\n            }\n        ],\n        \"datecreation\": \"1987-01-13T01:44:02.723Z\",\n        \"description\": \"qui ex a\",\n        \"developpeur\": {\n            \"avatar\": \"ea\",\n            \"bug\": [\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                }\n            ],\n            \"commentaire\": [\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                },\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                }\n            ],\n            \"idDev\": -64661504,\n            \"nom\": \"officia sed cillum voluptate velit\"\n        },\n        \"etat\": \"Excepteur\",\n        \"id\": 34763536,\n        \"priorite\": \"reprehenderit\",\n        \"titre\": \"magna deserunt eiusmod veniam\"\n    },\n    \"datecom\": \"<dateTime>\",\n    \"dev\": {\n        \"avatar\": \"laboris ut aliquip\",\n        \"bug\": [\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n            },\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n            }\n        ],\n        \"commentaire\": [\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n            },\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n            }\n        ],\n        \"idDev\": -10725368,\n        \"nom\": \"velit fugiat\"\n    },\n    \"message\": \"<string>\",\n    \"titre\": \"<string>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/com/bug/:id/dev/:iddev",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"com",
+								"bug",
+								":id",
+								"dev",
+								":iddev"
+							],
+							"variable": [
+								{
+									"key": "id"
+								},
+								{
+									"key": "iddev"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bug\": {\n        \"commentaire\": [\n            {\n                \"bug\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                \"datecom\": \"1947-07-10T05:41:07.715Z\",\n                \"developpeur\": {\n                    \"avatar\": \"tempor laboris nulla\",\n                    \"bug\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        }\n                    ],\n                    \"commentaire\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        }\n                    ],\n                    \"idDev\": 10292405,\n                    \"nom\": \"enim tempor sed quis Ut\"\n                },\n                \"id\": 77136023,\n                \"message\": \"aliqua\",\n                \"titre\": \"do sint ad in\"\n            },\n            {\n                \"bug\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                \"datecom\": \"1963-10-18T18:31:40.681Z\",\n                \"developpeur\": {\n                    \"avatar\": \"Excepteur consequat\",\n                    \"bug\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        }\n                    ],\n                    \"commentaire\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        }\n                    ],\n                    \"idDev\": -92968082,\n                    \"nom\": \"aute reprehenderit\"\n                },\n                \"id\": 76730167,\n                \"message\": \"consectetur\",\n                \"titre\": \"adipisicing nisi\"\n            }\n        ],\n        \"datecreation\": \"1987-01-13T01:44:02.723Z\",\n        \"description\": \"qui ex a\",\n        \"developpeur\": {\n            \"avatar\": \"ea\",\n            \"bug\": [\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                }\n            ],\n            \"commentaire\": [\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                },\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                }\n            ],\n            \"idDev\": -64661504,\n            \"nom\": \"officia sed cillum voluptate velit\"\n        },\n        \"etat\": \"Excepteur\",\n        \"id\": 34763536,\n        \"priorite\": \"reprehenderit\",\n        \"titre\": \"magna deserunt eiusmod veniam\"\n    },\n    \"datecom\": \"<dateTime>\",\n    \"dev\": {\n        \"avatar\": \"laboris ut aliquip\",\n        \"bug\": [\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n            },\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n            }\n        ],\n        \"commentaire\": [\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n            },\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n            }\n        ],\n        \"idDev\": -10725368,\n        \"nom\": \"velit fugiat\"\n    },\n    \"message\": \"<string>\",\n    \"titre\": \"<string>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/com/bug/:id/dev/:iddev",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"com",
+								"bug",
+								":id",
+								"dev",
+								":iddev"
+							],
+							"variable": [
+								{
+									"key": "id"
+								},
+								{
+									"key": "iddev"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bug\": {\n        \"commentaire\": [\n            {\n                \"bug\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                \"datecom\": \"1947-07-10T05:41:07.715Z\",\n                \"developpeur\": {\n                    \"avatar\": \"tempor laboris nulla\",\n                    \"bug\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        }\n                    ],\n                    \"commentaire\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        }\n                    ],\n                    \"idDev\": 10292405,\n                    \"nom\": \"enim tempor sed quis Ut\"\n                },\n                \"id\": 77136023,\n                \"message\": \"aliqua\",\n                \"titre\": \"do sint ad in\"\n            },\n            {\n                \"bug\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                \"datecom\": \"1963-10-18T18:31:40.681Z\",\n                \"developpeur\": {\n                    \"avatar\": \"Excepteur consequat\",\n                    \"bug\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                        }\n                    ],\n                    \"commentaire\": [\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        },\n                        {\n                            \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                        }\n                    ],\n                    \"idDev\": -92968082,\n                    \"nom\": \"aute reprehenderit\"\n                },\n                \"id\": 76730167,\n                \"message\": \"consectetur\",\n                \"titre\": \"adipisicing nisi\"\n            }\n        ],\n        \"datecreation\": \"1987-01-13T01:44:02.723Z\",\n        \"description\": \"qui ex a\",\n        \"developpeur\": {\n            \"avatar\": \"ea\",\n            \"bug\": [\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                },\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n                }\n            ],\n            \"commentaire\": [\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                },\n                {\n                    \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n                }\n            ],\n            \"idDev\": -64661504,\n            \"nom\": \"officia sed cillum voluptate velit\"\n        },\n        \"etat\": \"Excepteur\",\n        \"id\": 34763536,\n        \"priorite\": \"reprehenderit\",\n        \"titre\": \"magna deserunt eiusmod veniam\"\n    },\n    \"datecom\": \"<dateTime>\",\n    \"dev\": {\n        \"avatar\": \"laboris ut aliquip\",\n        \"bug\": [\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n            },\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Bug detected>\"\n            }\n        ],\n        \"commentaire\": [\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n            },\n            {\n                \"value\": \"<Circular reference to #/components/schemas/Commentaire detected>\"\n            }\n        ],\n        \"idDev\": -10725368,\n        \"nom\": \"velit fugiat\"\n    },\n    \"message\": \"<string>\",\n    \"titre\": \"<string>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/com/bug/:id/dev/:iddev",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"com",
+								"bug",
+								":id",
+								"dev",
+								":iddev"
+							],
+							"variable": [
+								{
+									"key": "id"
+								},
+								{
+									"key": "iddev"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "//localhost:8081/",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

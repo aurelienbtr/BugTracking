@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "689e940a-88a4-4b6d-8637-c8f6b4ebc489",
+		"name": "collection BugTracking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/developpeur",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/developpeur/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"developpeur",
+						"1"
+					]
+				},
+				"description": "Donne la liste de tout les developpeurw"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/developpeur/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/bug",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bug"
+					]
+				},
+				"description": "Donne le developpeur avec l'id indiqué"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/bug",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/bug/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bug",
+						"3"
+					]
+				},
+				"description": "Donne la liste de tout les bugs"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/bug/3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/commentaire",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"commentaire"
+					]
+				},
+				"description": "Donne le bug avec l'id indiqué "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/commentaire",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/commentaire",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"commentaire"
+					]
+				},
+				"description": "Donne la liste de tout les commantaires"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/bug/titre?titre=titre1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/bug/date?datedebut=2020-01-01&datefin=2020-12-30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bug",
+						"date"
+					],
+					"query": [
+						{
+							"key": "datedebut",
+							"value": "2020-01-01"
+						},
+						{
+							"key": "datefin",
+							"value": "2020-12-30"
+						}
+					]
+				},
+				"description": "Recherche parmis tout les bugs, le titre qui contient \"titre1\" et le renvoie"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/bug/date?datedebut=2020-01-01&datefin=2020-12-30",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/bug/date?datedebut=2020-01-01&datefin=2020-12-30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bug",
+						"date"
+					],
+					"query": [
+						{
+							"key": "datedebut",
+							"value": "2020-01-01"
+						},
+						{
+							"key": "datefin",
+							"value": "2020-12-30"
+						}
+					]
+				},
+				"description": "Trouve tout les bugs entre \"datedebut\" et \"datefin\""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/developpeur",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titre\": \"Titre du nouveau bug\",\r\n    \"description\": \"AvatarDuDeveloppeur6\",\r\n    \"priorite\":\"Priorite du nouveau bug\",\r\n    \"etat\":\"etat du nouveau bug\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/bug",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bug"
+					]
+				},
+				"description": "Ajout d'un developpeur ce cette maniere en JSon \r\n\r\n{\r\n    \"nom\": \"Developpeur6\",\r\n    \"avatar\": \"AvatarDuDeveloppeur6\"\r\n}\r\n\r\nla liste de bugs et commentaires est automatiquement vide"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/bug/etat?etat=TODO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/bug/priorite?priorite=HAUTE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bug",
+						"priorite"
+					],
+					"query": [
+						{
+							"key": "priorite",
+							"value": "HAUTE"
+						}
+					]
+				},
+				"description": "Liste les bugs selon l'etat (en majuscule)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/bug/priorite?priorite=HAUTE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/bug/priorite?priorite=HAUTE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bug",
+						"priorite"
+					],
+					"query": [
+						{
+							"key": "priorite",
+							"value": "HAUTE"
+						}
+					]
+				},
+				"description": "Liste les bugs selon leur priorite"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/commentaire/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/commentaire/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"commentaire",
+						"1"
+					]
+				},
+				"description": "On supprime d'abord les commentaires"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/bug/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/bug/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bug",
+						"1"
+					]
+				},
+				"description": "Puis en numero 2 les bugs"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/developpeur/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/bug/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bug",
+						"1"
+					]
+				},
+				"description": "Ensuite en dernier le developpeur"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/bug/4/dev/2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"titre\": \"ahhhhhh\",\r\n        \"description\": \"ahhhhhh\",\r\n        \"priorite\": \"ahhhhhh\",\r\n        \"etat\": \"ahhhhhh\",\r\n        \"datecreation\": \"2020-10-08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/bug/4/dev/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bug",
+						"4",
+						"dev",
+						"2"
+					]
+				},
+				"description": "{\r\n        \"titre\": \"ahhhhhh\",\r\n        \"description\": \"ahhhhhh\",\r\n        \"priorite\": \"ahhhhhh\",\r\n        \"etat\": \"ahhhhhh\",\r\n        \"datecreation\": \"2020-10-08\"\r\n}\r\n\r\nOn attribut un developpeur à un bug"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
