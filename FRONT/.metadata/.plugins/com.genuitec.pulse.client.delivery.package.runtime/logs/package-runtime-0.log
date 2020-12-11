@@ -1,0 +1,44 @@
+déc. 09, 2020 11:50:23 AM com.genuitec.pulse.client.deliverypackage.runtime.internal.Activator initializeLoggers
+INFOS: Package starting up at Wed Dec 09 11:50:23 CET 2020
+déc. 09, 2020 11:50:32 AM org.glassfish.grizzly.nio.NIOTransport start
+INFOS: Adjusting kernel thread pool to max size 5 to handle configured number of SelectorRunners
+déc. 09, 2020 11:50:32 AM org.glassfish.grizzly.http.server.NetworkListener start
+INFOS: Started listener bound to [127.0.0.1:63507]
+déc. 09, 2020 11:50:32 AM org.glassfish.grizzly.http.server.HttpServer start
+INFOS: [HttpServer] Started.
+déc. 09, 2020 11:50:32 AM org.glassfish.tyrus.server.Server start
+INFOS: WebSocket Registered apps: URLs all start with ws://127.0.0.1:63507
+déc. 09, 2020 11:50:32 AM org.glassfish.tyrus.server.Server start
+INFOS: WebSocket server started.
+déc. 10, 2020 8:08:54 AM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+INFOS: Stopped listener bound to [127.0.0.1:63507]
+déc. 10, 2020 8:08:54 AM org.glassfish.tyrus.server.Server stop
+INFOS: Websocket Server stopped.
+déc. 10, 2020 8:08:54 AM org.glassfish.grizzly.nio.NIOTransport start
+INFOS: Adjusting kernel thread pool to max size 5 to handle configured number of SelectorRunners
+déc. 10, 2020 8:08:54 AM org.glassfish.grizzly.http.server.NetworkListener start
+INFOS: Started listener bound to [127.0.0.1:63524]
+déc. 10, 2020 8:08:54 AM org.glassfish.grizzly.http.server.HttpServer start
+INFOS: [HttpServer-1] Started.
+déc. 10, 2020 8:08:55 AM org.glassfish.tyrus.server.Server start
+INFOS: WebSocket Registered apps: URLs all start with ws://127.0.0.1:63524
+déc. 10, 2020 8:08:55 AM org.glassfish.tyrus.server.Server start
+INFOS: WebSocket server started.
+déc. 10, 2020 8:09:07 AM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+INFOS: Stopped listener bound to [127.0.0.1:63524]
+déc. 10, 2020 8:09:07 AM org.glassfish.tyrus.server.Server stop
+INFOS: Websocket Server stopped.
+déc. 10, 2020 8:09:07 AM org.glassfish.grizzly.nio.NIOTransport start
+INFOS: Adjusting kernel thread pool to max size 5 to handle configured number of SelectorRunners
+déc. 10, 2020 8:09:07 AM org.glassfish.grizzly.http.server.NetworkListener start
+INFOS: Started listener bound to [127.0.0.1:63535]
+déc. 10, 2020 8:09:07 AM org.glassfish.grizzly.http.server.HttpServer start
+INFOS: [HttpServer-2] Started.
+déc. 10, 2020 8:09:07 AM org.glassfish.tyrus.server.Server start
+INFOS: WebSocket Registered apps: URLs all start with ws://127.0.0.1:63535
+déc. 10, 2020 8:09:07 AM org.glassfish.tyrus.server.Server start
+INFOS: WebSocket server started.
+déc. 10, 2020 8:41:25 AM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+INFOS: Stopped listener bound to [127.0.0.1:63535]
+déc. 10, 2020 8:41:25 AM org.glassfish.tyrus.server.Server stop
+INFOS: Websocket Server stopped.
