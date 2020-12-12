@@ -11,6 +11,26 @@
 				"method": "GET",
 				"header": [],
 				"url": {
+					"raw": "http://localhost:8081/developpeur",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"developpeur"
+					]
+				},
+				"description": "Donne la liste de tout les developpeurw"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/developpeur/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
 					"raw": "http://localhost:8081/developpeur/1",
 					"protocol": "http",
 					"host": [
@@ -22,12 +42,12 @@
 						"1"
 					]
 				},
-				"description": "Donne la liste de tout les developpeurw"
+				"description": "Donne le developpeur avec l'id indiqué"
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8081/developpeur/1",
+			"name": "http://localhost:8081/bug",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -42,12 +62,12 @@
 						"bug"
 					]
 				},
-				"description": "Donne le developpeur avec l'id indiqué"
+				"description": "Donne la liste de tout les bugs"
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8081/bug",
+			"name": "http://localhost:8081/bug/3",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -61,26 +81,6 @@
 					"path": [
 						"bug",
 						"3"
-					]
-				},
-				"description": "Donne la liste de tout les bugs"
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:8081/bug/3",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8081/commentaire",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8081",
-					"path": [
-						"commentaire"
 					]
 				},
 				"description": "Donne le bug avec l'id indiqué "
@@ -113,7 +113,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8081/bug/date?datedebut=2020-01-01&datefin=2020-12-30",
+					"raw": "http://localhost:8081/bug/titre?titre=titre1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -121,16 +121,12 @@
 					"port": "8081",
 					"path": [
 						"bug",
-						"date"
+						"titre"
 					],
 					"query": [
 						{
-							"key": "datedebut",
-							"value": "2020-01-01"
-						},
-						{
-							"key": "datefin",
-							"value": "2020-12-30"
+							"key": "titre",
+							"value": "titre1"
 						}
 					]
 				},
@@ -176,7 +172,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"titre\": \"Titre du nouveau bug\",\r\n    \"description\": \"AvatarDuDeveloppeur6\",\r\n    \"priorite\":\"Priorite du nouveau bug\",\r\n    \"etat\":\"etat du nouveau bug\"\r\n}",
+					"raw": "{\r\n    \"nom\": \"NouveauDev\",\r\n    \"avatar\": \"avatarDuDev\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -184,14 +180,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8081/bug",
+					"raw": "http://localhost:8081/developpeur",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8081",
 					"path": [
-						"bug"
+						"developpeur"
 					]
 				},
 				"description": "Ajout d'un developpeur ce cette maniere en JSon \r\n\r\n{\r\n    \"nom\": \"Developpeur6\",\r\n    \"avatar\": \"AvatarDuDeveloppeur6\"\r\n}\r\n\r\nla liste de bugs et commentaires est automatiquement vide"
@@ -204,7 +200,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8081/bug/priorite?priorite=HAUTE",
+					"raw": "http://localhost:8081/bug/etat?etat=TODO",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -212,12 +208,12 @@
 					"port": "8081",
 					"path": [
 						"bug",
-						"priorite"
+						"etat"
 					],
 					"query": [
 						{
-							"key": "priorite",
-							"value": "HAUTE"
+							"key": "etat",
+							"value": "TODO"
 						}
 					]
 				},
@@ -300,14 +296,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8081/bug/1",
+					"raw": "http://localhost:8081/developpeur/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8081",
 					"path": [
-						"bug",
+						"developpeur",
 						"1"
 					]
 				},
